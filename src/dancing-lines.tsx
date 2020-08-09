@@ -178,8 +178,8 @@ function DancingLines(props: Props) {
     document.addEventListener('mousemove', init);
     document.addEventListener('touchstart', init);
     document.body.addEventListener('orientationchange', resize);
-    window.addEventListener('resize', () => resize);
-    window.addEventListener('focus', () => start);
+    window.addEventListener('resize', resize);
+    window.addEventListener('focus', start);
     window.addEventListener('blur', stop);
 
     resize();
@@ -188,8 +188,8 @@ function DancingLines(props: Props) {
       document.removeEventListener('mousemove', init);
       document.removeEventListener('touchstart', init);
       document.body.removeEventListener('orientationchange', resize);
-      window.removeEventListener('resize', () => resize);
-      window.removeEventListener('focus', () => start);
+      window.removeEventListener('resize', resize);
+      window.removeEventListener('focus', start);
       window.removeEventListener('blur', stop);
     };
   }, [canvasRef.current]);
