@@ -9,7 +9,8 @@
     "build:lib": "rollup -c",
     "build:demo": "webpack",
     "serve": "webpack & http-server docs",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "publish": "npm publish dist"
   },
   "keywords": [],
   "author": "ZhiyueYi",
