@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "keywords": [],
-  "author": "",
+  "author": "ZhiyueYi",
   "license": "MIT",
   "dependencies": {
     "react": "^16.13.1"
@@ -60,5 +60,16 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhiyueYi/react-dancing-lines.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZhiyueYi/react-dancing-lines/issues"
+  },
+  "homepage": "https://github.com/ZhiyueYi/react-dancing-lines#readme"
 }
