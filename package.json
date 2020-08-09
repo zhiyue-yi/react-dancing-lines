@@ -5,8 +5,10 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
-    "build": "rollup -c",
-    "serve": "webpack-dev-server --mode=development --open",
+    "build": "npm run build:lib & npm run build:demo",
+    "build:lib": "rollup -c",
+    "build:demo": "webpack",
+    "serve": "webpack & http-server demo",
     "lint": "eslint ."
   },
   "keywords": [],
@@ -62,7 +64,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "directories": {
-    "doc": "docs"
+    "doc": "demo"
   },
   "repository": {
     "type": "git",

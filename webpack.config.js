@@ -2,7 +2,10 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './docs/index.js',
+  entry: './example/index.js',
+  output: {
+    path: path.resolve(__dirname, 'demo'),
+  },
   module: {
     rules: [
       {
@@ -19,14 +22,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './docs/index.html',
+      template: './example/index.html',
     }),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'docs'),
+    contentBase: path.join(__dirname, 'example'),
     compress: true,
     port: 3000,
   },
