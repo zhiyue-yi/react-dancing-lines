@@ -8,7 +8,7 @@
     "build": "npm run build:lib & npm run build:demo",
     "build:lib": "rollup -c",
     "build:demo": "webpack",
-    "serve": "webpack & http-server demo",
+    "serve": "webpack & http-server docs",
     "lint": "eslint ."
   },
   "keywords": [],
