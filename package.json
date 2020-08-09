@@ -10,7 +10,7 @@
     "build:demo": "webpack",
     "serve": "webpack & http-server docs",
     "lint": "eslint .",
-    "publish": "npm publish dist"
+    "publish": "node scripts/copy-package.js & npm publish ./dist"
   },
   "keywords": [],
   "author": "ZhiyueYi",
