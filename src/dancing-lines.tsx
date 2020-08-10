@@ -88,7 +88,7 @@ function DancingLines(props: Props) {
     const frame = frameRef.current;
 
     ctx.globalCompositeOperation = 'source-over';
-    ctx.fillStyle = 'rgba(8,5,16,0.4)';
+    ctx.fillStyle = 'rgb(8,5,16)';
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.globalCompositeOperation = 'lighter';
     ctx.strokeStyle = 'hsla(' + Math.round(hue.update()) + ',90%,50%,0.25)';
@@ -121,6 +121,8 @@ function DancingLines(props: Props) {
     const ctx = canvasRef.current.getContext('2d')!;
     ctx.canvas.width = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
+    ctx.fillStyle = 'rgb(8,5,16)';
+    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   };
 
   /**
