@@ -16,7 +16,6 @@
   "author": "ZhiyueYi",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.13.1"
   },
   "peerDependencies": {
     "react": "^16.13.1"
@@ -34,6 +33,7 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "html-webpack-plugin": "^4.3.0",
     "http-server": "^0.12.3",
+    "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rollup": "^2.23.0",
     "rollup-plugin-commonjs": "^10.1.0",
