@@ -153,7 +153,6 @@ function DancingLines(props: Props) {
       targetRef.current.x = event.clientX;
       targetRef.current.y = event.clientY;
     }
-    event.preventDefault();
   };
 
   const touchstart = (event: TouchEvent) => {

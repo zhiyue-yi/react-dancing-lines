@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run build:lib & npm run build:demo",
     "build:lib": "rollup -c",
-    "build:demo": "webpack",
+    "build:demo": "webpack --mode production",
     "serve": "http-server docs",
     "lint": "eslint .",
     "publish": "node scripts/copy-package.js & npm publish ./dist"
@@ -16,6 +16,7 @@
   "author": "ZhiyueYi",
   "license": "MIT",
   "dependencies": {
+    "webpack-cli": "^4.9.0"
   },
   "peerDependencies": {
     "react": "^16.13.1"
