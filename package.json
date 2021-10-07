@@ -1,6 +1,6 @@
 {
   "name": "react-dancing-lines",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A simple React background component with cursor effects and dark background",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
