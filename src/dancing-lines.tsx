@@ -13,10 +13,21 @@ interface Props {
   dampening?: number;
   tension?: number;
   debug?: boolean;
+  backgroundColor?: string;
 }
 
+const DEFAULT_BACKGROUND_COLOR = 'rgb(8,5,16)';
+
 function DancingLines(props: Props) {
-  const { debug = false, friction = 0.5, trails = 20, size = 50, dampening = 0.25, tension = 0.98 } = props;
+  const {
+    debug = false,
+    friction = 0.5,
+    trails = 20,
+    size = 50,
+    dampening = 0.25,
+    tension = 0.98,
+    backgroundColor = DEFAULT_BACKGROUND_COLOR,
+  } = props;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const targetRef = useRef<Point>({ x: 0, y: 0 });
   const tendrilsRef = useRef<Tendril[]>([]);
@@ -88,7 +99,7 @@ function DancingLines(props: Props) {
     const frame = frameRef.current;
 
     ctx.globalCompositeOperation = 'source-over';
-    ctx.fillStyle = 'rgb(8,5,16)';
+    ctx.fillStyle = backgroundColor;
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.globalCompositeOperation = 'lighter';
     ctx.strokeStyle = 'hsla(' + Math.round(hue.update()) + ',90%,50%,0.25)';
@@ -121,7 +132,7 @@ function DancingLines(props: Props) {
     const ctx = canvasRef.current.getContext('2d')!;
     ctx.canvas.width = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
-    ctx.fillStyle = 'rgb(8,5,16)';
+    ctx.fillStyle = backgroundColor;
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   };
 

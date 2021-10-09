@@ -13,7 +13,7 @@ export function App() {
         color: 'white',
       }}
     >
-      <DancingLines></DancingLines>
+      <DancingLines backgroundColor="rgb(8,5,16)"></DancingLines>
       <h1>Hello, world!</h1>
     </div>
   );
