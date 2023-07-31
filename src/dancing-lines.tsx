@@ -169,14 +169,6 @@ function DancingLines(props: Props) {
     }
   };
 
-  // const touchMove = (event: MouseEvent | TouchEvent) => {
-  //   if (event instanceof TouchEvent) {
-  //      targetRef.current.x = event.clientX; // any type added for these 2 lines
-  //     targetRef.current.y = event.clientY;
-  //   }
-  // }
-  
-
   const touchstart = (event: TouchEvent) => {
     debug && console.log('touchstart');
     if (event.touches.length == 1) {
