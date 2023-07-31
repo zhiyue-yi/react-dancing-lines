@@ -54,7 +54,7 @@ function DancingLines(props: Props) {
     document.removeEventListener('touchstart', init);
 
     document.addEventListener('mousemove', mousemove);
-    document.addEventListener('touchmove', mousemove);
+    document.addEventListener('touchmove', touchMove);
     document.addEventListener('touchstart', touchstart);
 
     mousemove(event);
@@ -155,16 +155,24 @@ function DancingLines(props: Props) {
     runningRef.current = false;
   };
 
-  const mousemove = (event: TouchEvent | MouseEvent) => {
+  const mousemove = (event: MouseEvent | TouchEvent | any ) => { 
     debug && console.log('mousemove');
-    if (event instanceof TouchEvent) {
-      targetRef.current.x = event.touches[0].pageX;
-      targetRef.current.y = event.touches[0].pageY;
+     if (event instanceof MouseEvent) {
+      targetRef.current.x = event.pageX;
+      targetRef.current.y = event.pageY;
     } else {
-      targetRef.current.x = event.clientX;
+      targetRef.current.x = event.clientX; // any type added for these 2 lines
       targetRef.current.y = event.clientY;
     }
   };
+
+  const touchMove = (event: MouseEvent | TouchEvent) => {
+    if (event instanceof TouchEvent) {
+      targetRef.current.x = event.touches[0].pageX;
+      targetRef.current.y = event.touches[0].pageY;
+    }
+  }
+  
 
   const touchstart = (event: TouchEvent) => {
     debug && console.log('touchstart');

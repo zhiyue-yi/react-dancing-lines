@@ -1,5 +1,5 @@
 {
-  "name": "react-dancing-lines",
+  "name": "react-dancing-lines-safari-firefox-support",
   "version": "1.1.4",
   "description": "A simple React background component with cursor effects and dark background",
   "main": "dist/index.js",
