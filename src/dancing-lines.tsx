@@ -155,13 +155,16 @@ function DancingLines(props: Props) {
     runningRef.current = false;
   };
 
-  const mousemove = (event: TouchEvent | MouseEvent) => {
+  const mousemove = (event: MouseEvent | TouchEvent | any ) => { 
     debug && console.log('mousemove');
-    if (event instanceof TouchEvent) {
+     if (event instanceof MouseEvent) {
+      targetRef.current.x = event.pageX;
+      targetRef.current.y = event.pageY;
+    } else if (event instanceof TouchEvent) {
       targetRef.current.x = event.touches[0].pageX;
       targetRef.current.y = event.touches[0].pageY;
     } else {
-      targetRef.current.x = event.clientX;
+      targetRef.current.x = event.clientX; // any type added for these 2 lines
       targetRef.current.y = event.clientY;
     }
   };
